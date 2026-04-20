@@ -45,7 +45,11 @@ select *
 from products
 where SupplierID = 4;
 
+/*6. How many employees work at northwind? */
+SELECT count(*)
+FROM northwind.employees;
 
-
-/*6. How many employees work at northwind? What employees have "manager"
-somewhere in their job title? Write queries to answer each question.*/
+/*What employees have "manager" somewhere in their job title? */
+select * 
+from employees
+where Title like "%Manager%";
