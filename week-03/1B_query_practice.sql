@@ -1,42 +1,54 @@
 /*1)Write a query to list the product id, product name, and unit price of every product that
 Northwind sells.*/
+
+
 SELECT ProductID,ProductName,UnitPrice
 FROM products;
-/*2) Write a query to identify the products where the unit price is $7.50 or less.*/
-select *
+
+/*2) Write a query to identify the prducts where the unit price is $7.50 or less.*/
+
+select ProductName,UnitPrice
 from products
 where UnitPrice <= 7.50;
+
 /*3.)What are the products that we carry where we have no units on hand, but 1 or more
 units are on backorder? */
+
 select ProductID,ProductName,UnitsInStock,UnitsOnOrder
 FROM products
 where UnitsInStock = 0 and UnitsOnOrder >= 1;
 
 /*Examine the products table. How does it identify the type (category) of each item
 sold?*/
-select ProductName,CategoryID
+
+select CategoryID
 from products;
 
 /*Where can you find a list of all categories? */
-SELECT * FROM northwind.categories;
+
+SELECT CategoryName
+FROM categories;
 
 /*Write a set of queries to answer these
 questions, ending with a query that creates a list of all the seafood items we carry*/
 
 select *
 from categories
-where CategoryName = "Seafood";
+where CategoryName = 'Seafood';
 
 /*5. Examine the products table again. How do you know what supplier each product
 comes from? */
+
 select SupplierID
 from products;
 
 /*Where can you find info on suppliers? */
-SELECT * FROM northwind.suppliers;
+
+SELECT * FROM suppliers;
 
 /*Write a set of queries to find the
-specific identifier for "Tokyo Traders" and then find all products from that supplier.*/
+specific identifier for "Tokyo Traders 4" and then find all products from that supplier.*/
+
 select *
 from suppliers
 where CompanyName = "Tokyo Traders";
@@ -46,10 +58,16 @@ from products
 where SupplierID = 4;
 
 /*6. How many employees work at northwind? */
-SELECT count(*)
-FROM northwind.employees;
+
+select count(*)
+from employees;
+
 
 /*What employees have "manager" somewhere in their job title? */
+select *
+from employees
+where Title like '%manager%';
+
 select * 
 from employees
 where Title like "%Manager%";
