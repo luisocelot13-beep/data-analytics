@@ -5,7 +5,7 @@ useful starting point.)*/
 select ProductName
 from products
 where UnitPrice =
-(select max(UnitPrice),ProductName
+(select max(UnitPrice)
 from products);
 
 

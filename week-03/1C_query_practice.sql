@@ -18,7 +18,7 @@ ascending order by product name.*/
 select *
 from products
 where UnitsInStock >= 100
-order by UnitPrice desc, ProductName asc;
+order by UnitPrice desc;
 
 
 /*4. Write a query against the orders table that displays the total number of distinct
