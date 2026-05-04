@@ -23,7 +23,9 @@ select p.ProductName,p.UnitPrice,s.CompanyName
 from products as p
 join suppliers as s
 on p.SupplierID = s.SupplierID
-where p.UnitPrice = '263.5000';
+
+where p.UnitPrice = (select max(UnitPrice)
+from products);
 
 /*4. Write a query to find total monthly payroll (the sum of all the employees’ monthly
 salaries).*/
@@ -48,11 +50,13 @@ order by s.SupplierID;
 
 /*7. Write a query to find the list of all category names and the average price for items in
 each category.*/
+
 select c.CategoryName,avg(p.UnitPrice)
 from categories as c
 join products as p
 on c.CategoryID = p.CategoryID
 group by c.CategoryName;
+
 /*8. Write a query to find, for all suppliers that provide at least 5 items to Northwind, what
 is the name of each supplier and the number of items they supply.*/
 

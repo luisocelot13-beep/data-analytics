@@ -54,10 +54,13 @@ order by s.CompanyName,o.ShipName asc;
 orders that included Sasquatch Ale.*/
 select o.OrderID,o.OrderDate,o.ShipName,o.ShipAddress
 from orders as o
+
 join `order details` as od
 on o.OrderID = od.OrderID
+
 join products as p
 on od.ProductID = p.ProductID
+
 where p.ProductName like '%Sasquatch Ale%';
 
 
