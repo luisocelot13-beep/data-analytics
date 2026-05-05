@@ -19,7 +19,7 @@ total_debt = credit_cards + stundet_loan
 net_worth = total_assets - total_debt
 
 # print statements
-print('Your total assets are ' ,total_assets)
+print(f'Your total assets are {total_assets}')  # introducing the f string formula so i dont need to recast its type.
 print('Your total debts are' , total_debt)
 print('Your net worth is' , net_worth)
 
