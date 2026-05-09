@@ -21,7 +21,6 @@ Time_guessed = 0
 
 guessed_numbers = []
 
-guessed_numbers = list(guessed_numbers)
 
 while Number_guess != secret_number:
 
