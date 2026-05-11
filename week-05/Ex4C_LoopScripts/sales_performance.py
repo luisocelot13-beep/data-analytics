@@ -19,5 +19,5 @@ for name,region,sales in sales_data:
     else:
         print(f'{name} ({region}): $ {sales:,.2f}')
     print(f'Running total {money_total:.2f}\n')
- 
+   
 print(f'\noverall total sales: ${money_total}:,.2f')
