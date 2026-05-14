@@ -7,7 +7,7 @@ Departments ={1: 'Marketing',
 
 department_search = int(input('Type in dept code:'))
 
-match department_search:
+match department_search: 
 
     case 1:
         print(f'Your department is {Departments[1]}')
