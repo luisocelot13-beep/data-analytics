@@ -1,0 +1,18 @@
+
+
+∗ What does a value in this column represent? What values might you see here?
+Customer_ID :  represent the ID number of customers. Most likely Int.
+
+∗ Is this column a part of the primary key to this table?yes
+
+∗ Is this column a part of a foreign key that points to a record in another table? if it is referenced in another column yes this column cusotmer_id will be a fk in another table
+
+∗ Would this column be valuable to bring into our Power BI Model? Yes, or no? Why?The main question is what are we looking for or what do we want answered if its related to customers then yes.
+
+∗ Do you believe this column is appropriately named for Data Analysis purposes? Yes, Name is Customer_id and is listing information listed per customer
+
+∗ If not, what might be a more appropriate name?na
+
+∗ What might be the data type and format for this column in a Power BI Model? INT,since it's listing out the id of customers
+
+∗ Can you think of any calculations where this column data might be used? If the user is wanting to get an output of even customer id numbers or mabye the most recent customer id created.
