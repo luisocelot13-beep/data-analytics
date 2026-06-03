@@ -1,18 +1,67 @@
+Categories:
+Pk:CategoryID
+FK:no
+valuable?yes
+calculations? filter per category options
 
 
-∗ What does a value in this column represent? What values might you see here?
-Customer_ID :  represent the ID number of customers. Most likely Int.
+Customers:
+pk:CustomerID
+fk:no
+Valuable?yes
+Calculations: filter to customer names
 
-∗ Is this column a part of the primary key to this table?yes
+Employees:
+PK:EMployeeID
+FK:employees 
+valuable? yes
+Calculations: filter to specific employee.
 
-∗ Is this column a part of a foreign key that points to a record in another table? if it is referenced in another column yes this column cusotmer_id will be a fk in another table
+Employee Territories:
+PK: EmployeeID
+FK:employees , territoryID
+Valuable? Depending on what is wanted.
+Calculations: filter to specific territories
 
-∗ Would this column be valuable to bring into our Power BI Model? Yes, or no? Why?The main question is what are we looking for or what do we want answered if its related to customers then yes.
+Order details:
+PK: OrderID
+FK:ProductID , OrderID
+Valuable? yes
+calculations: filter to order details
 
-∗ Do you believe this column is appropriately named for Data Analysis purposes? Yes, Name is Customer_id and is listing information listed per customer
+Orders :
+PK: OrderID
+FK:customerID, EmployeeID, ShipVIa to SHipperID
 
-∗ If not, what might be a more appropriate name?na
+Products:
+PK:ProductID
+FK:CategoryID, SUpplierID
+valuable? YEs
+calculations?if need product then yes
 
-∗ What might be the data type and format for this column in a Power BI Model? INT,since it's listing out the id of customers
 
-∗ Can you think of any calculations where this column data might be used? If the user is wanting to get an output of even customer id numbers or mabye the most recent customer id created.
+Region:
+PK:RegionID
+FK:none
+valuable?yes
+Calculations: filter to getion
+
+Shippers:
+PK:ShipperID
+FK:none
+valuable? yes
+calculations? if shipper information yes
+
+
+Suppliers:
+pk:SUpplierID
+FK:none
+valuable? yes
+calculations? if supplier info is needed.
+
+
+territories:
+PK:TerritoryID
+FK:RegionID
+valuable?yes
+calculations?if  territories is needed
